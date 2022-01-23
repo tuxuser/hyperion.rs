@@ -55,6 +55,7 @@ strum = "0.21"
 strum_macros = "0.21"
 thiserror = "1.0"
 tokio = { version = "1.8", features = ["macros", "net", "process", "rt-multi-thread", "signal", "sync", "time"] }
+tokio-serial = "5.4.1"
 tokio-stream = { version = "0.1", features = ["net"] }
 tokio-util = { version = "0.6", features = ["codec"] }
 toml = "0.5"

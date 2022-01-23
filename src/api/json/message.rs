@@ -427,6 +427,8 @@ pub enum LedDeviceClass {
     Ws2812Spi,
     #[serde(rename = "file")]
     File,
+    #[serde(rename = "Adalight")]
+    Adalight,
 }
 
 #[derive(Debug, Serialize)]
@@ -439,7 +441,7 @@ impl LedDevicesInfo {
         use LedDeviceClass::*;
 
         Self {
-            available: vec![Dummy, PhilipsHue, Ws2812Spi, File],
+            available: vec![Dummy, PhilipsHue, Ws2812Spi, File, Adalight],
         }
     }
 }

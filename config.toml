@@ -1,0 +1,1364 @@
+[instances.0.instance]
+friendlyName = 'LGTV'
+enabled = true
+
+[instances.0.device]
+type = 'adalight'
+hardwareLedCount = 225
+rate = 500000
+lightberry_apa102_mode = false
+output = 'ttyACM0'
+
+[instances.0.ledConfig]
+classic = {bottom = 72, edgegap = 16, glength = 0, gpos = 0, hdepth = 8, left = 41, overlap = 0, pblh = 0, pblv = 100, pbrh = 100, pbrv = 100, position = 184, ptlh = 0, ptlv = 0, ptrh = 100, ptrv = 0, reverse = false, right = 41, top = 71, vdepth = 5}
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.92
+vmin = 0.8995
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.8995
+vmin = 0.879
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.879
+vmin = 0.8585
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.8585
+vmin = 0.838
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.838
+vmin = 0.8176
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.8176
+vmin = 0.7971
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.7971
+vmin = 0.7766
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.7766
+vmin = 0.7561
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.7561
+vmin = 0.7356
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.7356
+vmin = 0.7151
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.7151
+vmin = 0.6946
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.6946
+vmin = 0.6741
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.6741
+vmin = 0.6537
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.6537
+vmin = 0.6332
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.6332
+vmin = 0.6127
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.6127
+vmin = 0.5922
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.5922
+vmin = 0.5717
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.5717
+vmin = 0.5512
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.5512
+vmin = 0.5307
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.5307
+vmin = 0.5102
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.5102
+vmin = 0.4898
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.4898
+vmin = 0.4693
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.4693
+vmin = 0.4488
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.4488
+vmin = 0.4283
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.4283
+vmin = 0.4078
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.4078
+vmin = 0.3873
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.3873
+vmin = 0.3668
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.3668
+vmin = 0.3463
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.3463
+vmin = 0.3259
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.3259
+vmin = 0.3054
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.3054
+vmin = 0.2849
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.2849
+vmin = 0.2644
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.2644
+vmin = 0.2439
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.2439
+vmin = 0.2234
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.2234
+vmin = 0.2029
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.2029
+vmin = 0.1824
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.1824
+vmin = 0.162
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.162
+vmin = 0.1415
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.1415
+vmin = 0.121
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.121
+vmin = 0.1005
+
+[[instances.0.leds]]
+hmax = 0.05
+hmin = 0
+vmax = 0.1005
+vmin = 0.08
+
+[[instances.0.leds]]
+hmax = 0.0578
+hmin = 0.045
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.0706
+hmin = 0.0578
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.0835
+hmin = 0.0706
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.0963
+hmin = 0.0835
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1091
+hmin = 0.0963
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1219
+hmin = 0.1091
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1347
+hmin = 0.1219
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1475
+hmin = 0.1347
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1604
+hmin = 0.1475
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1732
+hmin = 0.1604
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.186
+hmin = 0.1732
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.1988
+hmin = 0.186
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2116
+hmin = 0.1988
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2244
+hmin = 0.2116
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2373
+hmin = 0.2244
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2501
+hmin = 0.2373
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2629
+hmin = 0.2501
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2757
+hmin = 0.2629
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.2885
+hmin = 0.2757
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3013
+hmin = 0.2885
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3142
+hmin = 0.3013
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.327
+hmin = 0.3142
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3398
+hmin = 0.327
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3526
+hmin = 0.3398
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3654
+hmin = 0.3526
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3782
+hmin = 0.3654
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.3911
+hmin = 0.3782
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4039
+hmin = 0.3911
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4167
+hmin = 0.4039
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4295
+hmin = 0.4167
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4423
+hmin = 0.4295
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4551
+hmin = 0.4423
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.468
+hmin = 0.4551
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4808
+hmin = 0.468
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.4936
+hmin = 0.4808
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5064
+hmin = 0.4936
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5192
+hmin = 0.5064
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.532
+hmin = 0.5192
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5449
+hmin = 0.532
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5577
+hmin = 0.5449
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5705
+hmin = 0.5577
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5833
+hmin = 0.5705
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.5961
+hmin = 0.5833
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6089
+hmin = 0.5961
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6218
+hmin = 0.6089
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6346
+hmin = 0.6218
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6474
+hmin = 0.6346
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6602
+hmin = 0.6474
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.673
+hmin = 0.6602
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6858
+hmin = 0.673
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.6987
+hmin = 0.6858
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7115
+hmin = 0.6987
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7243
+hmin = 0.7115
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7371
+hmin = 0.7243
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7499
+hmin = 0.7371
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7627
+hmin = 0.7499
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7756
+hmin = 0.7627
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.7884
+hmin = 0.7756
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8012
+hmin = 0.7884
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.814
+hmin = 0.8012
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8268
+hmin = 0.814
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8396
+hmin = 0.8268
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8525
+hmin = 0.8396
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8653
+hmin = 0.8525
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8781
+hmin = 0.8653
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.8909
+hmin = 0.8781
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.9037
+hmin = 0.8909
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.9165
+hmin = 0.9037
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.9294
+hmin = 0.9165
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.9422
+hmin = 0.9294
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 0.955
+hmin = 0.9422
+vmax = 0.08
+vmin = 0
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.1005
+vmin = 0.08
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.121
+vmin = 0.1005
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.1415
+vmin = 0.121
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.162
+vmin = 0.1415
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.1824
+vmin = 0.162
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.2029
+vmin = 0.1824
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.2234
+vmin = 0.2029
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.2439
+vmin = 0.2234
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.2644
+vmin = 0.2439
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.2849
+vmin = 0.2644
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.3054
+vmin = 0.2849
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.3259
+vmin = 0.3054
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.3463
+vmin = 0.3259
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.3668
+vmin = 0.3463
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.3873
+vmin = 0.3668
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.4078
+vmin = 0.3873
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.4283
+vmin = 0.4078
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.4488
+vmin = 0.4283
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.4693
+vmin = 0.4488
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.4898
+vmin = 0.4693
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.5102
+vmin = 0.4898
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.5307
+vmin = 0.5102
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.5512
+vmin = 0.5307
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.5717
+vmin = 0.5512
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.5922
+vmin = 0.5717
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.6127
+vmin = 0.5922
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.6332
+vmin = 0.6127
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.6537
+vmin = 0.6332
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.6741
+vmin = 0.6537
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.6946
+vmin = 0.6741
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.7151
+vmin = 0.6946
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.7356
+vmin = 0.7151
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.7561
+vmin = 0.7356
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.7766
+vmin = 0.7561
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.7971
+vmin = 0.7766
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.8176
+vmin = 0.7971
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.838
+vmin = 0.8176
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.8585
+vmin = 0.838
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.879
+vmin = 0.8585
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.8995
+vmin = 0.879
+
+[[instances.0.leds]]
+hmax = 1
+hmin = 0.95
+vmax = 0.92
+vmin = 0.8995
+
+[[instances.0.leds]]
+hmax = 0.955
+hmin = 0.9424
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.9424
+hmin = 0.9297
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.9297
+hmin = 0.9171
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.9171
+hmin = 0.9044
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.9044
+hmin = 0.8918
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8918
+hmin = 0.8792
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8792
+hmin = 0.8665
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8665
+hmin = 0.8539
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8539
+hmin = 0.8413
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8413
+hmin = 0.8286
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8286
+hmin = 0.816
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.816
+hmin = 0.8033
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.8033
+hmin = 0.7907
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7907
+hmin = 0.7781
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7781
+hmin = 0.7654
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7654
+hmin = 0.7528
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7528
+hmin = 0.7401
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7401
+hmin = 0.7275
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7275
+hmin = 0.7149
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7149
+hmin = 0.7022
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.7022
+hmin = 0.6896
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6896
+hmin = 0.6769
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6769
+hmin = 0.6643
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6643
+hmin = 0.6517
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6517
+hmin = 0.639
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.639
+hmin = 0.6264
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6264
+hmin = 0.6138
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6138
+hmin = 0.6011
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.6011
+hmin = 0.5885
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5885
+hmin = 0.5758
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5758
+hmin = 0.5632
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5632
+hmin = 0.5506
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5506
+hmin = 0.5379
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5379
+hmin = 0.5253
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5253
+hmin = 0.5126
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5126
+hmin = 0.5
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.5
+hmin = 0.4874
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4874
+hmin = 0.4747
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4747
+hmin = 0.4621
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4621
+hmin = 0.4494
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4494
+hmin = 0.4368
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4368
+hmin = 0.4242
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4242
+hmin = 0.4115
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.4115
+hmin = 0.3989
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3989
+hmin = 0.3863
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3863
+hmin = 0.3736
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3736
+hmin = 0.361
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.361
+hmin = 0.3483
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3483
+hmin = 0.3357
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3357
+hmin = 0.3231
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3231
+hmin = 0.3104
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.3104
+hmin = 0.2978
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2978
+hmin = 0.2851
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2851
+hmin = 0.2725
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2725
+hmin = 0.2599
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2599
+hmin = 0.2472
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2472
+hmin = 0.2346
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2346
+hmin = 0.2219
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2219
+hmin = 0.2093
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.2093
+hmin = 0.1967
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1967
+hmin = 0.184
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.184
+hmin = 0.1714
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1714
+hmin = 0.1588
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1588
+hmin = 0.1461
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1461
+hmin = 0.1335
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1335
+hmin = 0.1208
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1208
+hmin = 0.1082
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.1082
+hmin = 0.0956
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.0956
+hmin = 0.0829
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.0829
+hmin = 0.0703
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.0703
+hmin = 0.0576
+vmax = 1
+vmin = 0.92
+
+[[instances.0.leds]]
+hmax = 0.0576
+hmin = 0.045
+vmax = 1
+vmin = 0.92
+

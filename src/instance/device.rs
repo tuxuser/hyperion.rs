@@ -7,6 +7,7 @@ mod common;
 
 // Device implementation modules
 
+mod adalight;
 mod dummy;
 mod file;
 mod ws2812spi;
@@ -19,6 +20,10 @@ pub enum DeviceError {
     FuturesIo(#[from] futures_io::Error),
     #[error("Format error: {0}")]
     FormatError(#[from] std::fmt::Error),
+    #[error("Failed to open device: {0}")]
+    FailedOpen(String),
+    #[error("Serial error: {0}")]
+    SerialError(String),
 }
 
 #[async_trait]
@@ -56,6 +61,9 @@ impl Device {
             }
             models::Device::File(file) => {
                 inner = Box::new(file::FileDevice::new(file)?);
+            }
+            models::Device::Adalight(adalight) => {
+                inner = Box::new(adalight::AdalightDevice::new(adalight)?);
             }
             other => {
                 return Err(DeviceError::NotSupported(other.into()));

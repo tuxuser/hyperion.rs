@@ -148,6 +148,7 @@ fn default_file_rewrite_time() -> u32 {
     1000
 }
 
+
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Validate)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct File {
@@ -170,6 +171,34 @@ impl DeviceConfig for File {
     }
 }
 
+
+fn default_adalight_delay_after_connect() -> u32 {
+    0
+}
+
+fn default_adalight_rewrite_time() -> u32 {
+    1000
+}
+
+pub struct Adalight {
+    #[serde(default = "Default::default")]
+    pub color_order: ColorOrder,
+    #[serde(default = "default_adalight_delay_after_connect")]
+    pub delay_after_connect: u32,
+    #[serde(rename = "lightberry_apa102_mode")]
+    pub lightberry_apa102_mode: bool,
+    pub output: String,
+    pub rate: u32,
+    #[serde(default = "default_adalight_rewrite_time")]
+    pub rewrite_time: u32,
+}
+
+impl DeviceConfig for Adalight {
+    fn hardware_led_count(&self) -> usize {
+        self.hardware_led_count as _
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, IntoStaticStr, Delegate, From)]
 #[serde(rename_all = "lowercase", tag = "type", deny_unknown_fields)]
 #[delegate(DeviceConfig)]
@@ -178,6 +207,7 @@ pub enum Device {
     Ws2812Spi(Ws2812Spi),
     PhilipsHue(PhilipsHue),
     File(File),
+    Adalight(Adalight),
 }
 
 impl Default for Device {
@@ -193,6 +223,7 @@ impl Validate for Device {
             Device::Ws2812Spi(device) => device.validate(),
             Device::PhilipsHue(device) => device.validate(),
             Device::File(device) => device.validate(),
+            Device::Adalight(device) => device.validate(),
         }
     }
 }
