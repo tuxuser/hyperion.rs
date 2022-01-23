@@ -42,6 +42,9 @@ jobs:
           - target: arm-unknown-linux-gnueabihf
             cross: arm-linux-gnueabihf-
             image: "vtavernier/cross:raspberrypi"
+          - target: arm-unknown-linux-gnueabi
+            cross: arm-linux-gnueabi-
+            image: "rustembedded/cross:arm-unknown-linux-gnueabi-0.2.1"
 
     runs-on: ubuntu-20.04
 
