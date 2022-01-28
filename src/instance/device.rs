@@ -8,6 +8,8 @@ mod common;
 // Device implementation modules
 
 mod dummy;
+mod tpm2;
+mod tpm2net;
 mod ws2812spi;
 
 #[derive(Debug, Error)]
@@ -50,6 +52,12 @@ impl Device {
             }
             models::Device::Ws2812Spi(ws2812spi) => {
                 inner = Box::new(ws2812spi::Ws2812SpiDevice::new(ws2812spi)?);
+            }
+            models::Device::Tpm2(tpm2) => {
+                inner = Box::new(tpm2::Tpm2Device::new(tpm2)?);
+            }
+            models::Device::Tpm2Net(tpm2net) => {
+                inner = Box::new(tpm2net::Tpm2NetDevice::new(tpm2net)?);
             }
             other => {
                 return Err(DeviceError::NotSupported(other.into()));

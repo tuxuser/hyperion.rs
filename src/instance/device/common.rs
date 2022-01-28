@@ -1,9 +1,13 @@
+use std::net::SocketAddr;
 use std::time::Instant;
 
 use async_trait::async_trait;
+use tokio::io::AsyncWriteExt;
+use tokio::net::UdpSocket;
+use tokio_serial::{self, SerialPortBuilderExt, SerialStream};
 
 use super::{DeviceError, DeviceImpl};
-use crate::models::{self, DeviceConfig};
+use crate::models::{self, DeviceConfig, NetworkDeviceConfig, Rs232DeviceConfig};
 
 #[async_trait]
 pub trait WritingDevice: Send + Sized {
@@ -116,5 +120,65 @@ impl<D: WritingDevice> DeviceImpl for Rewriter<D> {
         } else {
             futures::future::pending().await
         }
+    }
+}
+
+pub struct Rs232Provider {
+    serial_port: SerialStream,
+}
+
+impl Rs232Provider {
+    fn new(port: &str, baudrate: u32) -> Result<Self, DeviceError> {
+        let device_name = format!("/dev/{}", port);
+        let handle = tokio_serial::new(&device_name, baudrate)
+            .open_native_async()
+            .map_err(|_| DeviceError::NotSupported("Failed opening serial port"))?;
+
+        Ok(Self {
+            serial_port: handle,
+        })
+    }
+
+    pub fn from_config(config: &dyn Rs232DeviceConfig) -> Result<Self, DeviceError> {
+        Self::new(&config.port_name(), config.baudrate())
+    }
+
+    pub async fn write(&mut self, data: &[u8]) -> Result<(), DeviceError> {
+        self.serial_port.write(data).await?;
+        self.serial_port.flush().await?;
+
+        Ok(())
+    }
+}
+
+pub struct UdpProvider {
+    target_addr: SocketAddr,
+    socket: Option<UdpSocket>,
+}
+
+impl UdpProvider {
+    fn new(address: &str, port: u16) -> Result<Self, DeviceError> {
+        let remote_address: SocketAddr = format!("{}:{}", address, port)
+            .parse()
+            .map_err(|_| DeviceError::NotSupported("Failed parsing address / port"))?;
+
+        Ok(Self {
+            target_addr: remote_address,
+            socket: None,
+        })
+    }
+
+    pub fn from_config(config: &dyn NetworkDeviceConfig) -> Result<Self, DeviceError> {
+        Self::new(&config.address(), config.port())
+    }
+
+    pub async fn write(&mut self, data: &[u8]) -> Result<(), DeviceError> {
+        if self.socket.is_none() {
+            self.socket = Some(UdpSocket::bind(self.target_addr).await?);
+        }
+
+        self.socket.as_ref().unwrap().send(data).await?;
+
+        Ok(())
     }
 }
