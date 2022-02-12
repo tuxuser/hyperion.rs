@@ -10,6 +10,8 @@ mod common;
 mod adalight;
 mod dummy;
 mod file;
+mod tpm2;
+mod tpm2net;
 mod ws2812spi;
 
 #[derive(Debug, Error)]
@@ -64,6 +66,12 @@ impl Device {
             }
             models::Device::Adalight(adalight) => {
                 inner = Box::new(adalight::AdalightDevice::new(adalight)?);
+            }
+            models::Device::Tpm2(tpm2) => {
+                inner = Box::new(tpm2::Tpm2Device::new(tpm2)?);
+            }
+            models::Device::Tpm2Net(tpm2net) => {
+                inner = Box::new(tpm2net::Tpm2NetDevice::new(tpm2net)?);
             }
             other => {
                 return Err(DeviceError::NotSupported(other.into()));

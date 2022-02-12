@@ -41,6 +41,63 @@ macro_rules! impl_device_config {
     };
 }
 
+#[delegatable_trait]
+pub trait Rs232DeviceConfig: Sync + Send {
+    fn port_name(&self) -> String;
+    fn baudrate(&self) -> u32;
+}
+
+macro_rules! impl_rs232_device_config {
+    ($t:ty) => {
+        impl Rs232DeviceConfig for $t {
+            fn port_name(&self) -> String {
+                self.output.clone()
+            }
+
+            fn baudrate(&self) -> u32 {
+                self.rate
+            }
+        }
+
+        impl DeviceConfig for $t {
+            fn hardware_led_count(&self) -> usize {
+                self.hardware_led_count as _
+            }
+        }
+    };
+}
+
+pub enum NetworkProtocol {
+    Tcp,
+    Udp,
+}
+
+#[delegatable_trait]
+pub trait NetworkDeviceConfig: Sync + Send {
+    fn address(&self) -> String;
+    fn port(&self) -> u16;
+}
+
+macro_rules! impl_network_device_config {
+    ($t:ty) => {
+        impl NetworkDeviceConfig for $t {
+            fn address(&self) -> String {
+                self.host.clone()
+            }
+
+            fn port(&self) -> u16 {
+                self.port
+            }
+        }
+
+        impl DeviceConfig for $t {
+            fn hardware_led_count(&self) -> usize {
+                self.hardware_led_count as _
+            }
+        }
+    };
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum DummyDeviceMode {
@@ -144,6 +201,7 @@ impl DeviceConfig for PhilipsHue {
     }
 }
 
+
 fn default_file_rewrite_time() -> u32 {
     1000
 }
@@ -155,6 +213,8 @@ pub struct File {
     pub color_order: ColorOrder,
     #[validate(range(min = 1))]
     pub hardware_led_count: u32,
+    #[serde(default = "Default::default")]
+    pub delay_after_connect: u32,
     #[serde(default = "Default::default")]
     pub latch_time: u32,
     pub output: String,
@@ -179,9 +239,13 @@ fn default_adalight_rewrite_time() -> u32 {
     1000
 }
 
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Validate)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct Adalight {
     #[serde(default = "Default::default")]
     pub color_order: ColorOrder,
+    #[validate(range(min = 1))]
+    pub hardware_led_count: u32,
     #[serde(default = "default_adalight_delay_after_connect")]
     pub delay_after_connect: u32,
     #[serde(rename = "lightberry_apa102_mode")]
@@ -192,11 +256,61 @@ pub struct Adalight {
     pub rewrite_time: u32,
 }
 
-impl DeviceConfig for Adalight {
-    fn hardware_led_count(&self) -> usize {
-        self.hardware_led_count as _
-    }
+impl_rs232_device_config!(Adalight);
+
+fn default_tpm2_rate() -> u32 {
+    115200
 }
+
+fn default_tpm2_rewrite_time() -> u32 {
+    1000
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Validate)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct Tpm2 {
+    #[serde(default = "Default::default")]
+    pub color_order: ColorOrder,
+    #[validate(range(min = 1))]
+    pub hardware_led_count: u32,
+    #[serde(default = "Default::default")]
+    pub delay_after_connect: u32,
+    #[serde(default = "Default::default")]
+    pub latch_time: u32,
+    pub output: String,
+    #[serde(default = "default_tpm2_rate")]
+    pub rate: u32,
+    #[serde(default = "default_tpm2_rewrite_time")]
+    pub rewrite_time: u32,
+}
+
+impl_rs232_device_config!(Tpm2);
+
+fn default_tpm2net_max_packet_count() -> u32 {
+    170
+}
+
+fn default_tpm2net_port() -> u16 {
+    65506
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Validate)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct Tpm2Net {
+    #[serde(default = "Default::default")]
+    pub color_order: ColorOrder,
+    #[validate(range(min = 1))]
+    pub hardware_led_count: u32,
+    #[serde(default = "Default::default")]
+    pub latch_time: u32,
+    #[serde(rename = "max-packet", default = "default_tpm2net_max_packet_count")]
+    pub max_packet: u32,
+    pub host: String,
+    #[serde(default = "default_tpm2net_port")]
+    pub port: u16,
+}
+
+impl_network_device_config!(Tpm2Net);
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, IntoStaticStr, Delegate, From)]
 #[serde(rename_all = "lowercase", tag = "type", deny_unknown_fields)]
@@ -207,6 +321,8 @@ pub enum Device {
     PhilipsHue(PhilipsHue),
     File(File),
     Adalight(Adalight),
+    Tpm2(Tpm2),
+    Tpm2Net(Tpm2Net),
 }
 
 impl Default for Device {
@@ -223,6 +339,8 @@ impl Validate for Device {
             Device::PhilipsHue(device) => device.validate(),
             Device::File(device) => device.validate(),
             Device::Adalight(device) => device.validate(),
+            Device::Tpm2(device) => device.validate(),
+            Device::Tpm2Net(device) => device.validate(),
         }
     }
 }
