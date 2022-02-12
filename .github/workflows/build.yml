@@ -99,7 +99,7 @@ jobs:
         with:
           use-cross: true
           command: build
-          args: --release --target=${{ matrix.target }}
+          args: --release --target=${{ matrix.target }} --no-default-features
 
       - name: Strip resulting binary
         run: docker run -v ${{ github.workspace }}:/src ${{ matrix.image }} ${{ matrix.cross }}strip /src/target/${{ matrix.target }}/release/hyperiond
