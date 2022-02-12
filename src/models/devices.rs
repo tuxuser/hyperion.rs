@@ -201,7 +201,6 @@ impl DeviceConfig for PhilipsHue {
     }
 }
 
-
 fn default_file_rewrite_time() -> u32 {
     1000
 }
@@ -229,7 +228,6 @@ impl DeviceConfig for File {
         self.hardware_led_count as _
     }
 }
-
 
 fn default_adalight_delay_after_connect() -> u32 {
     0
