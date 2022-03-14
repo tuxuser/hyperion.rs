@@ -252,6 +252,8 @@ pub struct Adalight {
     pub rate: u32,
     #[serde(default = "default_adalight_rewrite_time")]
     pub rewrite_time: u32,
+    #[serde(default = "Default::default")]
+    pub latch_time: u32,
 }
 
 impl_rs232_device_config!(Adalight);
